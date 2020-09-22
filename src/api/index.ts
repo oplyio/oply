@@ -14,6 +14,6 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 export const initializeClient = (pbClient: any): any => {
-    const url = process.env.REACT_APP_API_URL || '/'
+    const url = process.env.REACT_APP_API_URL || window.location.origin
     return new pbClient(url)
 }
