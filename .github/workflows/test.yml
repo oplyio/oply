@@ -17,7 +17,8 @@ jobs:
       - uses: actions/cache@v2
         with:
             key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
-            path: **/node_modules
+            path: |
+              **/node_modules
       - run: make test
       - run: npm install
       - run: npm run test
