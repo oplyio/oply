@@ -1,0 +1,23 @@
+name: Test
+on:
+  push:
+    branches:
+        - main
+    pull_request:
+        branches:
+            - main
+            - release
+jobs:
+  run_tests:
+    runs-on: ubuntu-latest
+    env:
+        NODE_ENV: testing
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+            key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
+            path: **/node_modules
+      - run: make test
+      - run: npm install
+      - run: npm run test
