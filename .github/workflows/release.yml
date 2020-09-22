@@ -29,7 +29,5 @@ jobs:
         with:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-          registry: docker.pkg.github.com
-          repository: oplyio/oply/oplyserver
-          tags: 
-            - dev
+          push: true
+          tags: 'ghcr.io/oplyio/oplyserver:dev'
