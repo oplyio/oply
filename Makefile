@@ -7,7 +7,7 @@ test:
 	go test -v ./...
 
 image:
-	docker build -t oplyio/oplyserver .
+	docker build -t ghcr.io/oplyio/oplyserver:dev .
 
 proto:
 	protoc ./api/**/*.proto \
