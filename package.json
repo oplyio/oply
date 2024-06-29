@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "migrate": "tsx ./db/migrate.ts",
+    "migrate:generate": "drizzle-kit generate"
   },
   "dependencies": {
     "@clerk/nextjs": "^5.1.6",
@@ -17,18 +19,24 @@
     "@mui/material": "^5.15.21",
     "@tailwindcss/forms": "^0.5.7",
     "clsx": "^2.1.1",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.31.2",
+    "nanoid": "^5.0.7",
     "next": "14.2.4",
-    "react": "^18",
-    "react-dom": "^18"
+    "postgres": "^3.4.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
+    "@types/node": "^20.14.9",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "drizzle-kit": "^0.22.7",
+    "eslint": "^8.57.0",
     "eslint-config-next": "14.2.4",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.2"
   }
 }
