@@ -27,7 +27,7 @@ export const usersToOrganizations = pgTable(
 );
 
 export const usersToOrganizationsRelations = relations(usersToOrganizations, ({ one }) => ({
-  group: one(organizations, {
+  organization: one(organizations, {
     fields: [usersToOrganizations.organizationId],
     references: [organizations.id],
   }),
