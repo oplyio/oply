@@ -38,7 +38,7 @@ export default function CreateOrganization({ searchParams }: CreateOrganizationP
         { searchParams.first && (
           <Alert className="mb-8" variant="info">
             <RocketIcon className="w-6 h-6 text-yellow-500" />
-            <AlertTitle>Let's go!</AlertTitle>
+            <AlertTitle>Let&apos;s go!</AlertTitle>
             <AlertDescription>Create your first organization to get started.</AlertDescription>
           </Alert>
         )}

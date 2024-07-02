@@ -14,7 +14,7 @@ export default function OrgProviders({ children, organization }: OrgProvidersPro
 
   useEffect(() => {
     setOrganization(organization)
-  }, [])
+  }, [setOrganization, organization])
 
   return <>{ children }</>
 }
