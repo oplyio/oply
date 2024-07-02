@@ -10,7 +10,7 @@ export default function Header() {
   const { setSidebarOpen, organization } = useContext(UiContext)
 
   return (<>
-    <div className="fixed top-0 z-40 flex w-full h-16 shrink-0 items-center gap-x-4 bg-black border-b border-gray-900 px-4 sm:gap-x-6 sm:px-6 lg:px-8">
+    <div className="fixed top-0 z-40 flex w-full h-16 shrink-0 items-center gap-x-4 bg-black border-b border-zinc-900 px-4 sm:gap-x-6 sm:px-6 lg:px-8">
       { organization && (
         <button type="button" className="-m-2.5 p-2.5 text-gray-700 lg:hidden" onClick={() => setSidebarOpen(true)}>
           <span className="sr-only">Open sidebar</span>
